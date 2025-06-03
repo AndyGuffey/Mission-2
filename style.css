@@ -1,0 +1,246 @@
+/* global style reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: none;
+  padding: 0;
+}
+
+#caption {
+  margin: 15px 0;
+  font-size: 1.2em;
+  color: #657346;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 39px;
+  color: #657346;
+  margin-bottom: 20px;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  margin: 50px 100px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px 0;
+  gap: 32px;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: #bf4904;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #d9731a;
+}
+
+.slideshow {
+  background: #cfd9ad;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px 100px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.image-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+/* Main image adjustments  */
+#main-image {
+  flex: 0 1 700px; /* Allow image to shrink but not grow beyond 700px */
+  width: 100%;
+  max-width: 700px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(60, 60, 90, 0.12);
+  border: 4px solid #fff;
+  display: block;
+}
+
+.image-display img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.arrow {
+  flex: 0 0 54px; /* Prevent arrows from shrinking or growing */
+  width: 54px;
+  height: 54px;
+  background: #657346;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 54px; /* Larger button */
+  height: 54px;
+  font-size: 2rem; /* Larger arrow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(60, 60, 90, 0.1);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  outline: none;
+  margin: 0 10px;
+}
+
+.arrow:hover {
+  background: #bf4904;
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+#caption {
+  margin: 15px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.thumb {
+  width: 70px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: border 0.2s, opacity 0.2s;
+}
+
+.thumb.active,
+.thumb:hover {
+  border: 2px solid #bf4904;
+  opacity: 1;
+}
+/* map container styles */
+#map-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+#map-frame {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(60, 60, 90, 0.1);
+}
+.socials i {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: #657346;
+}
+.socials i:hover {
+  color: #bf4904;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* -----RWD------ */
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  /* Display No arrows on Mobile */
+  .arrow {
+    display: none;
+  }
+  /* Thumbnails larger */
+  .thumb {
+    width: 60px;
+    height: 45px;
+    margin: 4px;
+  }
+  .thumbnails {
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .slideshow {
+    padding: 4vw 0;
+    margin: 0 auto;
+    max-width: 100vw;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  #main-image {
+    width: 100vw;
+    max-width: 100vw;
+    height: auto;
+    min-height: 140px;
+    box-sizing: border-box;
+  }
+  .image-display {
+    gap: 2px;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  #map-frame {
+    max-width: 98vw;
+    width: 98vw;
+    height: 200px;
+    box-sizing: border-box;
+  }
+  /* Makes nav bar more compact for smaller screen displays  */
+  nav ul {
+    margin: 10px 0;
+    padding: 8px 0;
+    gap: 8px;
+    border-radius: 8px;
+    flex-direction: row;
+    align-items: center;
+  }
+  nav li {
+    margin: 0 0 4px 0;
+  }
+  nav a {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+}

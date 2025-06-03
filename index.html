@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Travel Gallary</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Travel summary</a></li>
+          <li><a href="#">Gallary</a></li>
+          <li><a href="#">My Tips</a></li>
+          <li><a href="#">Contact me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Slideshow Section -->
+    <main class="slideshow">
+      <h1>Our favorite pics</h1>
+
+      <!-- Main displayed image -->
+      <div class="image-display">
+        <button class="arrow" id="prev">&#10094;</button>
+        <img id="main-image" src="M2-images/uk/uk2.JPG" alt="Travel image" />
+        <button class="arrow" id="next">&#10095;</button>
+      </div>
+
+      <p id="caption">Arundel, England</p>
+
+      <!-- Thumnail images -->
+
+      <div class="thumbnails">
+        <!-- UK images & map data -->
+
+        <img
+          class="thumb active"
+          src="M2-images/uk/uk2.JPG"
+          alt="Arundel, England"
+          data-lat="50.855412"
+          data-lng="-0.552400"
+        />
+
+        <img
+          class="thumb"
+          src="M2-images/uk/uk1.jpg"
+          alt="London, England"
+          data-lat="51.482835"
+          data-lng="-0.144202"
+        />
+
+        <img
+          class="thumb"
+          src="M2-images/uk/uk3.jpg"
+          alt="London, England"
+          data-lat="51.504540"
+          data-lng="-0.129081"
+        />
+        <img
+          class="thumb"
+          src="M2-images/uk/uk4.jpg"
+          alt="London, England"
+          data-lat="51.500642"
+          data-lng="-0.126297"
+        />
+
+        <!-- FRANCE images & map data-->
+        <img
+          class="thumb"
+          src="M2-images/france/france1.JPG"
+          alt="Le Mont-Saint-Michel, France"
+          data-lat="48.631978"
+          data-lng="-1.508612"
+        />
+        <img
+          class="thumb"
+          src="M2-images/france/france2.JPG"
+          alt="Vers-Pont-du-Gard, France"
+          data-lat="43.946268"
+          data-lng="4.534583"
+        />
+        <img
+          class="thumb"
+          src="M2-images/france/france3.jpg"
+          alt="Menton, France"
+          data-lat="43.775552"
+          data-lng="7.502558"
+        />
+        <img
+          class="thumb"
+          src="M2-images/france/france4.JPG"
+          alt="Paris, France"
+          data-lat="48.857540"
+          data-lng="2.293317"
+        />
+
+        <!-- AUSTRIA images & map data-->
+        <img
+          class="thumb"
+          src="M2-images/vienna/Vienna1.JPG"
+          alt="Vienna, Austria"
+          data-lat="48.216495"
+          data-lng="16.397049"
+        />
+        <img
+          class="thumb"
+          src="M2-images/vienna/vienna2.jpg"
+          alt="Vienna, Austria"
+          data-lat="48.215099"
+          data-lng="16.359897"
+        />
+        <img
+          class="thumb"
+          src="M2-images/vienna/vienna4.jpg"
+          alt="Vienna, Austria"
+          data-lat="48.214068"
+          data-lng="16.401708 "
+        />
+        <!-- CROATIA images & map data-->
+        <img
+          class="thumb"
+          src="M2-images/croatia/croatia1.JPG"
+          alt="Zadar, Croatia"
+          data-lat="44.115321"
+          data-lng="15.224468"
+        />
+        <img
+          class="thumb"
+          src="M2-images/croatia/croatia2.jpg"
+          alt="Zadar, Croatia"
+          data-lat="44.107926"
+          data-lng="15.231151"
+        />
+        <img
+          class="thumb"
+          src="M2-images/croatia/croatia3.JPG"
+          alt="Cavtat, Croatia"
+          data-lat="42.581884"
+          data-lng="18.218702"
+        />
+        <img
+          class="thumb"
+          src="M2-images/croatia/croatia4.JPG"
+          alt="Cavtat, Croatia"
+          data-lat="42.586343"
+          data-lng="18.213329"
+        />
+
+        <!-- GREECE images & map data-->
+        <img
+          class="thumb"
+          src="M2-images/greece/greece1.JPG"
+          alt="Santorini, Greece"
+          data-lat="36.461292"
+          data-lng="25.375417"
+        />
+        <img
+          class="thumb"
+          src="M2-images/greece/greece2.JPG"
+          alt="Crete, Greece"
+          data-lat="34.986696"
+          data-lng="24.749670"
+        />
+        <img
+          class="thumb"
+          src="M2-images/greece/greece3.JPG"
+          alt="Milos, Greece"
+          data-lat="36.738713"
+          data-lng="24.419291"
+        />
+        <img
+          class="thumb"
+          src="M2-images/greece/greece4.JPG"
+          alt="Milos, Greece"
+          data-lat="36.736222"
+          data-lng="24.418386"
+        />
+        <img
+          class="thumb"
+          src="M2-images/greece/greece5.jpg"
+          alt="Crete, Greece"
+          data-lat="35.172351"
+          data-lng="24.400363"
+        />
+
+        <!-- ITALY images & map data-->
+        <img
+          class="thumb"
+          src="M2-images/italy/italy1.JPG"
+          alt="Rome, Italy"
+          data-lat="41.890643"
+          data-lng="12.491205"
+        />
+        <img
+          class="thumb"
+          src="M2-images/italy/italy2.JPG"
+          alt="Vatican City"
+          data-lat="41.901773"
+          data-lng="12.455796"
+        />
+        <img
+          class="thumb"
+          src="M2-images/italy/italy3.JPG"
+          alt="Rome, Italy"
+          data-lat="41.900796"
+          data-lng="12.483085"
+        />
+        <img
+          class="thumb"
+          src="M2-images/italy/italy4.JPG"
+          alt="Sicily, Italy"
+          data-lat="38.070618"
+          data-lng="12.822525"
+        />
+        <!-- SPAIN images & map data-->
+        <img
+          class="thumb"
+          src="M2-images/spain/spain1.JPG"
+          alt="Barcelona, Spain"
+          data-lat="41.391799"
+          data-lng="2.165088"
+        />
+        <img
+          class="thumb"
+          src="M2-images/spain/spain2.JPG"
+          alt="Barcelona, Spain"
+          data-lat="41.395331"
+          data-lng="2.162136"
+        />
+        <img
+          class="thumb"
+          src="M2-images/spain/spain3.JPG"
+          alt="Barcelona, Spain"
+          data-lat="41.384671"
+          data-lng="2.175772"
+        />
+        <img
+          class="thumb"
+          src="M2-images/spain/spain4.JPG"
+          alt="Barcelona, Spain"
+          data-lat="41.403056"
+          data-lng="2.173604"
+        />
+
+        <!-- NETHERLANDS images & map data-->
+        <img
+          class="thumb"
+          src="M2-images/netherlands/netherlands1.jpg"
+          alt="Amsterdam, Netherlands"
+          data-lat="52.376723"
+          data-lng="4.898082"
+        />
+        <img
+          class="thumb"
+          src="M2-images/netherlands/netherlands2.jpg"
+          alt="Amsterdam, Netherlands"
+          data-lat="52.371194"
+          data-lng="4.890717"
+        />
+        <img
+          class="thumb"
+          src="M2-images/netherlands/netherlands3.jpg"
+          alt="Amsterdam, Netherlands"
+          data-lat="52.375374"
+          data-lng="4.900059"
+        />
+        <img
+          class="thumb"
+          src="M2-images/netherlands/netherlands4.JPG"
+          alt="Amsterdam, Netherlands"
+          data-lat="52.357745"
+          data-lng="4.869226"
+        />
+      </div>
+      <br />
+
+      <!-- Google map section  -->
+      <hr />
+
+      <h3>Explore it virtually!</h3>
+      <div id="map-container">
+        <iframe
+          id="map-frame"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src=""
+        >
+        </iframe>
+      </div>
+      <div class="socials">
+        <a href="https://github.com/AndyGuffey" target="_blank">
+          <i id="socials" class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
